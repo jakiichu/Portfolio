@@ -8,13 +8,14 @@ const AvatarComponent = (): ReactNode => {
   const [padding, setPadding] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    setPadding({ x: ref.current?.offsetLeft, y: ref.current?.offsetTop });
-    console.log(padding);
+    if (![ref.current?.offsetLeft, ref.current?.offsetTop].includes(undefined))
+      setPadding({
+        x: ref.current?.offsetLeft as number,
+        y: ref.current?.offsetTop as number,
+      });
   }, [ref.current]);
 
   const isMd = window.innerWidth > 768;
-
-  console.log(isMd);
 
   return (
     <>
