@@ -20,10 +20,10 @@ const AvatarComponent = (): ReactNode => {
   return (
     <>
       <motion.div
-        animate={{ opacity: 0 }}
+        animate={{ opacity: 0, display: "none" }}
         className="fixed bg-white w-screen h-screen top-0 left-0"
         initial={{ opacity: 100 }}
-        transition={{ delay: 2, duration: 1 }}
+        transition={{ delay: 3, duration: 1 }}
       />
       <div>
         <div ref={ref} />
