@@ -6,7 +6,9 @@ import SocialLink from "@/features/social-link/component";
 const SocialLinkList = (): ReactNode => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      {socialLinkList.map(SocialLink)}
+      {socialLinkList.map((value, index) => (
+        <SocialLink key={index} {...value} />
+      ))}
     </div>
   );
 };
