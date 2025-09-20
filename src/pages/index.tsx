@@ -5,8 +5,12 @@ import SocialLinkList from "@/widget/social-link-list/component";
 import Header from "@/shared/ui/header";
 import SkillsList from "@/widget/skills-list/component";
 import TextInformation from "@/widget/text-information";
+import ProjectList from "@/widget/projects-list/component";
+import { useProjectStore } from "@/entities/project/store";
 
 const IndexPage = () => {
+  const { data } = useProjectStore();
+
   return (
     <main className="mx-auto px-4 py-8 md:py-16">
       <div className="max-w-4xl mx-auto grid grid-cols-1 gap-12 md:gap-16">
@@ -23,7 +27,7 @@ const IndexPage = () => {
         </section>
         <section>
           <Header>Projects</Header>
-          <div className="text-center">None (づ￣ 3￣)づ</div>
+          <ProjectList data={data} />
         </section>
         <div className="text-center">
           <Button>Contact Me</Button>
