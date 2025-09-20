@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 import { Badge } from "@heroui/badge";
 import { Avatar } from "@heroui/avatar";
 import { motion } from "framer-motion";
+import { HandWavingIcon } from "@phosphor-icons/react";
 
 const AvatarComponent = (): ReactNode => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -45,7 +46,7 @@ const AvatarComponent = (): ReactNode => {
                   initial={{ scale: 2 }}
                   transition={{ duration: 1, repeat: Infinity, repeatDelay: 6 }}
                 >
-                  👋
+                  <HandWavingIcon className="size-4" />
                 </motion.div>
               }
             >

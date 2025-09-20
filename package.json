@@ -13,6 +13,7 @@
     "@heroui/avatar": "^2.2.21",
     "@heroui/badge": "^2.2.16",
     "@heroui/button": "2.2.26",
+    "@heroui/chip": "^2.2.21",
     "@heroui/code": "2.2.20",
     "@heroui/dropdown": "2.3.26",
     "@heroui/input": "2.4.27",
@@ -38,6 +39,7 @@
     "react-router-dom": "6.23.0",
     "tailwind-variants": "3.1.1",
     "tailwindcss": "4.1.11",
+    "zod": "^4.1.9",
     "zustand": "^5.0.8"
   },
   "devDependencies": {

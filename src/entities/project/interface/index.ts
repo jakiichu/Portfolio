@@ -3,11 +3,14 @@ interface IProjectEntity {
   image: string;
   id: string;
   description: string;
+  projectUrl: string;
+  sourceUrl: string;
+  chip: Array<string>;
 }
 
 interface IProjectStore {
   data: Array<IProjectEntity>;
-  getOne: (id: string) => IProjectEntity | undefined;
+  getOne: (id: string) => IProjectEntity;
 }
 
 export type { IProjectEntity, IProjectStore };

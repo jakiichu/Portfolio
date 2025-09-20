@@ -1,11 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 
-import IndexPage from "@/pages";
+import MainPage from "@/pages/main";
+import { ERouterPath } from "@/shared/constant/enum/router";
+import ProjectItemPage from "@/pages/project/item/component";
+import WrapperLayout from "@/app/layout/wrapper";
 
 const App = () => {
   return (
     <Routes>
-      <Route element={<IndexPage />} path="/" />
+      <Route element={<WrapperLayout />}>
+        <Route element={<MainPage />} path={ERouterPath.MAIN} />
+        <Route element={<ProjectItemPage />} path={ERouterPath.ONE_PROJECT} />
+      </Route>
     </Routes>
   );
 };
