@@ -6,7 +6,7 @@ import TextInformation from "@/widget/text-information";
 import ProjectList from "@/widget/projects-list/component";
 import { useProjectStore } from "@/entities/project/store";
 
-const IndexPage = () => {
+const MainPage = () => {
   const { data } = useProjectStore();
 
   return (
@@ -16,6 +16,7 @@ const IndexPage = () => {
         <TextInformation />
       </header>
       <section>
+        <Header>Links</Header>
         <SocialLinkList />
       </section>
       <section>
@@ -30,4 +31,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default MainPage;

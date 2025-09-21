@@ -41,7 +41,7 @@ const ProjectItem = ({
   return (
     <motion.button
       ref={ref}
-      className="border border-black rounded-2xl hover:overflow-ellipsis overflow-hidden cursor-pointer hover:shadow-2xl transition-shadow"
+      className="border border-black dark:border-white rounded-2xl hover:overflow-ellipsis overflow-hidden cursor-pointer hover:shadow-2xl transition-shadow"
       style={{
         rotateX,
         rotateY,

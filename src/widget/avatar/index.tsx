@@ -22,7 +22,7 @@ const AvatarComponent = (): ReactNode => {
     <>
       <motion.div
         animate={{ opacity: 0, display: "none" }}
-        className="fixed bg-white w-screen h-screen top-0 left-0"
+        className="fixed bg-white dark:bg-gray-800 w-screen h-screen top-0 left-0"
         initial={{ opacity: 100 }}
         transition={{ delay: 3, duration: 1 }}
       />
@@ -38,7 +38,7 @@ const AvatarComponent = (): ReactNode => {
             transition={{ delay: 2, duration: 1 }}
           >
             <Badge
-              className="top-10 right-10 bg-white"
+              className="top-10 right-10 bg-white dark:bg-gray-800 border-none p-1"
               color="default"
               content={
                 <motion.div
@@ -46,7 +46,7 @@ const AvatarComponent = (): ReactNode => {
                   initial={{ scale: 2 }}
                   transition={{ duration: 1, repeat: Infinity, repeatDelay: 6 }}
                 >
-                  <HandWavingIcon className="size-4" />
+                  <HandWavingIcon className="size-6" />
                 </motion.div>
               }
             >

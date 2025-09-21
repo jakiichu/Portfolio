@@ -16,7 +16,7 @@ const SkillsItem = ({ Icon, content }: ISkillsItemProps): ReactNode => {
       >
         <Icon size="24" />
       </motion.div>
-      <h3 className="font-semibold text-foreground-light dark:text-foreground-dark mt-2">
+      <h3 className="font-semibold text-foreground-light dark:text-foreground-dark mt-2 uppercase">
         {content}
       </h3>
     </motion.div>
