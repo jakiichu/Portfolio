@@ -1,21 +1,22 @@
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useRef } from "react";
 import { Chip } from "@heroui/chip";
 import { motion } from "framer-motion";
+
+import { useAfterMountMemo } from "@/shared/utils/hook/after-mount-memo";
 
 interface IRunerStokeProps {
   chip: string[];
 }
 
-const RunerStoke = ({ chip }: IRunerStokeProps): ReactNode => {
+const RunnerStoke = ({ chip }: IRunerStokeProps): ReactNode => {
   const ref = useRef<HTMLDivElement | null>(null);
 
-  const [width, setWidth] = useState<number | null>(null);
+  const width = useAfterMountMemo(() => {
+    if (!ref.current) return;
 
-  useEffect(() => {
-    if (ref.current) setWidth(ref.current?.offsetWidth);
-  }, [ref.current]);
+    return ref.current?.offsetWidth;
+  }, []);
 
-  //todo поправить
   return (
     <div className="w-full overflow-hidden">
       {!ref.current && (
@@ -27,6 +28,7 @@ const RunerStoke = ({ chip }: IRunerStokeProps): ReactNode => {
           ))}
         </div>
       )}
+
       {width && (
         <motion.div
           animate={{ x: -width }}
@@ -48,4 +50,4 @@ const RunerStoke = ({ chip }: IRunerStokeProps): ReactNode => {
   );
 };
 
-export default RunerStoke;
+export default RunnerStoke;

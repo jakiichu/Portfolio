@@ -4,13 +4,13 @@ import { CaretLeftIcon } from "@phosphor-icons/react";
 
 import { projectValidation } from "../validation";
 import { IProjectItemPageParams } from "../interface";
+import RunnerStoke from "../../../../widget/runner-stoke/component";
 
 import { useProjectStore } from "@/entities/project/store";
 import { useValidateParams } from "@/shared/utils/hook/validate-params";
 import Header from "@/shared/ui/header";
 import { useCustomNavigate } from "@/shared/utils/hook/navigate";
 import { ERouterPath } from "@/shared/constant/enum/router";
-import RunerStoke from "@/widget/runer-stoke/component";
 
 const ProjectItemPage = (): ReactNode => {
   const { id } = useValidateParams<IProjectItemPageParams>(projectValidation);
@@ -38,7 +38,7 @@ const ProjectItemPage = (): ReactNode => {
         <img alt={name} className="w-full h-auto rounded-2xl" src={image} />
         <p>{description}</p>
       </div>
-      <RunerStoke chip={chip} />
+      <RunnerStoke chip={chip} />
       <iframe className="w-full h-[850px]" src={projectUrl} title={name} />
     </div>
   );

@@ -43,6 +43,7 @@ const AvatarComponent = (): ReactNode => {
               content={
                 <motion.div
                   animate={{ scale: [1, 2, 1], rotate: [0, 20, -20, 0] }}
+                  className=" z-30"
                   initial={{ scale: 2 }}
                   transition={{ duration: 1, repeat: Infinity, repeatDelay: 6 }}
                 >

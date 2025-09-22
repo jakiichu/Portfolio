@@ -7,8 +7,6 @@ interface IThemeForm {
   theme: boolean;
 }
 
-//todo поправить точку на темном фоне белую от чекбокса
-
 const Header = (): ReactNode => {
   const form = useForm<IThemeForm>();
 
@@ -23,8 +21,11 @@ const Header = (): ReactNode => {
 
   return (
     <header className="absolute left-0 right-0">
-      <div className="max-w-4xl mx-auto flex justify-end">
-        <Switch {...form.register("theme", { onChange: handleToggle })}>
+      <div className="max-w-4xl mx-auto flex justify-end px-4">
+        <Switch
+          {...form.register("theme", { onChange: handleToggle })}
+          className="z-0"
+        >
           <IconComponent className="size-6" />
         </Switch>
       </div>
