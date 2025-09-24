@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 
-import { ISkillsItemProps } from "@/features/skills-item/interface";
+import { ISkillsItemProps } from "@/widget/skills-list/ui/item/interface";
 
 const SkillsItem = ({ Icon, content }: ISkillsItemProps): ReactNode => {
   return (
@@ -23,4 +23,4 @@ const SkillsItem = ({ Icon, content }: ISkillsItemProps): ReactNode => {
   );
 };
 
-export default SkillsItem;
+export { SkillsItem };

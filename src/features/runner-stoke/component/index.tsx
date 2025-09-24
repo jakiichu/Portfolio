@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 import { useAfterMountMemo } from "@/shared/utils/hook/after-mount-memo";
 
-interface IRunerStokeProps {
+interface IRunnerStokeProps {
   chip: string[];
 }
 
-const RunnerStoke = ({ chip }: IRunerStokeProps): ReactNode => {
+const RunnerStoke = ({ chip }: IRunnerStokeProps): ReactNode => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   const width = useAfterMountMemo(() => {

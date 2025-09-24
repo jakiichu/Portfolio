@@ -5,7 +5,7 @@ import {
   IslandIcon,
 } from "@phosphor-icons/react";
 
-import { ISkillsItemProps } from "@/features/skills-item/interface";
+import { ISkillsItemProps } from "../ui/item/interface";
 
 type ISkillsList = Array<ISkillsItemProps>;
 

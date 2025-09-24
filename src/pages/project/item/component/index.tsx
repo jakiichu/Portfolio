@@ -4,7 +4,7 @@ import { CaretLeftIcon } from "@phosphor-icons/react";
 
 import { projectValidation } from "../validation";
 import { IProjectItemPageParams } from "../interface";
-import RunnerStoke from "../../../../widget/runner-stoke/component";
+import RunnerStoke from "../../../../features/runner-stoke/component";
 
 import { useProjectStore } from "@/entities/project/store";
 import { useValidateParams } from "@/shared/utils/hook/validate-params";

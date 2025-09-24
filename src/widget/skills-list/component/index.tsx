@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
 
 import { skillsList } from "../const";
-
-import SkillsItem from "@/features/skills-item/component";
+import { SkillsItem } from "../ui/item";
 
 const SkillsList = (): ReactNode => {
   return (

@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 
+import ProjectItem from "../ui/item/component";
+
 import { IProjectEntity } from "@/entities/project/interface";
-import ProjectItem from "@/features/project-item/component";
 
 interface IProjectListProps {
   data: Array<IProjectEntity>;

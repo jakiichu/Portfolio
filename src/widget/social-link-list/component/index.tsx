@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 
+import SocialLink from "../ui/item/component";
+
 import { socialLinkList } from "@/widget/social-link-list/const";
-import SocialLink from "@/features/social-link/component";
 
 const SocialLinkList = (): ReactNode => {
   return (

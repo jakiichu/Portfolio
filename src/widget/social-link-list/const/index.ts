@@ -5,7 +5,7 @@ import {
   TelegramLogoIcon,
 } from "@phosphor-icons/react";
 
-import { ISocialLinkProps } from "@/features/social-link/interface";
+import { ISocialLinkProps } from "../ui/item/interface";
 
 type ISocialLinkArray = Array<ISocialLinkProps>;
 
