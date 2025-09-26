@@ -51,7 +51,11 @@ const AvatarComponent = (): ReactNode => {
                 </motion.div>
               }
             >
-              <Avatar className="size-64" radius="full" src="/avatar.jpg" />
+              <Avatar
+                className="size-64"
+                radius="full"
+                src="https://avatars.githubusercontent.com/u/72372517?v=4"
+              />
             </Badge>
           </motion.div>
         )}
