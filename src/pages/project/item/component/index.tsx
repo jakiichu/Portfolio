@@ -4,13 +4,13 @@ import { CaretLeftIcon } from "@phosphor-icons/react";
 
 import { projectValidation } from "../validation";
 import { IProjectItemPageParams } from "../interface";
-import RunnerStoke from "../../../../features/runner-stoke/component";
 
 import { useProjectStore } from "@/entities/project/store";
 import { useValidateParams } from "@/shared/utils/hook/validate-params";
 import Header from "@/shared/ui/header";
 import { useCustomNavigate } from "@/shared/utils/hook/navigate";
 import { ERouterPath } from "@/shared/constant/enum/router";
+import RunnerStoke from "@/features/runner-stoke/component";
 
 const ProjectItemPage = (): ReactNode => {
   const { id } = useValidateParams<IProjectItemPageParams>(projectValidation);

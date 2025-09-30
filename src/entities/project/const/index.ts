@@ -6,6 +6,7 @@ import { tools } from "@/entities/dependencies-chip/tools.ts";
 import { cli } from "@/entities/dependencies-chip/cli.ts";
 import { language } from "@/entities/dependencies-chip/language.ts";
 import { architecture } from "@/entities/dependencies-chip/architecture.ts";
+import { routerChip } from "@/entities/dependencies-chip/router";
 
 const initialProject = [
   {
@@ -28,6 +29,30 @@ const initialProject = [
       tools.eslint,
       tools.esToolkit,
       tools.siberiacancodeReactuse,
+    ],
+  },
+
+  {
+    name: "todo vue",
+    image: "/todo.png",
+    id: "236899d-1235-4aad-ad11-14133212341a",
+    sourceUrl: "https://github.com/jakiichu/todo-vue",
+    projectUrl: "https://todo-vue-nine-topaz.vercel.app/",
+    description:
+      "This is my first attempt at building something with Vue.js.\n" +
+      "\n" +
+      "It’s a simple TODO application — nothing fancy, just the basics: adding tasks, marking them as done, and deleting them.\n" +
+      "\n" +
+      "The project is more of a learning experiment (a kind of 'trial run') to get familiar with Vue’s components, reactivity, and overall workflow. Over time, I may expand it with more features, but for now it’s just a small step into the Vue ecosystem.",
+    chip: [
+      language.typescript,
+      architecture.layeredArchitecture,
+      cli.vite,
+      coreLib.vue,
+      styleEngine.tailwindcss,
+      stateManager.tanstackQuery,
+      tools.eslint,
+      routerChip.vueRouter,
     ],
   },
 ] as Array<IProjectEntity>;

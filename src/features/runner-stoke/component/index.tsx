@@ -40,7 +40,10 @@ const RunnerStoke = ({ chip }: IRunnerStokeProps): ReactNode => {
           }}
         >
           {chip.concat(chip).map((value, i) => (
-            <Chip key={i} className="bg-primary text-white first:ml-4">
+            <Chip
+              key={i}
+              className="bg-primary text-white first:ml-4 uppercase"
+            >
               {value}
             </Chip>
           ))}

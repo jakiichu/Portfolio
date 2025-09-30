@@ -51,7 +51,7 @@ const ProjectItem = ({
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
     >
-      <img alt={name} className="w-full h-auto" src={image} />
+      <img alt={name} className="h-[300px] w-auto" src={image} />
       <div className="p-2 flex flex-col gap-4">
         <p>{name}</p>
         <p className="truncate max-h-20 h-full">{description}</p>
