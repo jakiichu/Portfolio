@@ -10,7 +10,7 @@ interface IProjectListProps {
 
 const ProjectList = ({ data }: IProjectListProps): ReactNode => {
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 gap-16">
+    <div className="mt-4 grid md:grid-cols-2 grid-cols-1 gap-16">
       {data.map((value, index) => (
         <ProjectItem {...value} key={index} />
       ))}
