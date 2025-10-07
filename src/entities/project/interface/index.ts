@@ -4,7 +4,8 @@ interface IProjectEntity {
   id: string;
   description: string;
   projectUrl: string;
-  sourceUrl: string;
+  hasPreview: boolean;
+  sourceUrl?: string;
   chip: Array<string>;
 }
 

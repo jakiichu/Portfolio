@@ -34,7 +34,7 @@ const SocialLink = ({
     <motion.a
       className={`${copyItem ? "cursor-pointer" : ""} flex items-center gap-3 p-4 rounded-lg bg-background-light/50 dark:bg-background-dark/50 border border-border-light dark:border-border-dark hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors`}
       href={link}
-      target={"_blank"}
+      target="_blank"
       transition={{ duration: 0.15 }}
       variants={{
         tap: { rotate: 5 },

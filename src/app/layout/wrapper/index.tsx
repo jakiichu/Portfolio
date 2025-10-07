@@ -5,7 +5,7 @@ import Header from "@/app/layout/header/component";
 
 const WrapperLayout = (): ReactNode => {
   return (
-    <main className="mx-auto px-4 py-8 md:py-16 bg-white dark:bg-gray-800 transition-background">
+    <main className="mx-auto px-4 py-8 md:py-16 bg-white dark:bg-gray-800 transition-background min-h-screen">
       <Header />
       <Outlet />
     </main>

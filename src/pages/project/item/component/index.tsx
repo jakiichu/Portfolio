@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import { Button } from "@heroui/button";
-import { CaretLeftIcon } from "@phosphor-icons/react";
+import { CaretLeftIcon, CaretRightIcon } from "@phosphor-icons/react";
+import { cnBase } from "tailwind-variants";
+import { motion } from "framer-motion";
 
 import { projectValidation } from "../validation";
 import { IProjectItemPageParams } from "../interface";
@@ -16,7 +18,8 @@ const ProjectItemPage = (): ReactNode => {
   const { id } = useValidateParams<IProjectItemPageParams>(projectValidation);
   const { getOne } = useProjectStore();
 
-  const { projectUrl, sourceUrl, name, image, description, chip } = getOne(id);
+  const { projectUrl, sourceUrl, name, image, description, chip, hasPreview } =
+    getOne(id);
 
   const { navigate } = useCustomNavigate();
   const handleNavigateBack = (): void => {
@@ -30,16 +33,47 @@ const ProjectItemPage = (): ReactNode => {
       </Button>
       <Header className="uppercase flex justify-between">
         {name}{" "}
-        <a href={sourceUrl} rel="noreferrer" target="_blank">
+        <motion.a
+          className={cnBase(
+            !sourceUrl && "text-red-500 line-through decoration-white",
+          )}
+          href={sourceUrl}
+          rel="noreferrer"
+          target="_blank"
+          transition={{ duration: 0.1 }}
+          variants={
+            hasPreview
+              ? {}
+              : {
+                  shake: {
+                    x: [0, -8, 8, -8, 8, 0],
+                    y: [0, 2, -1, -4, 8, 0],
+                    transition: { duration: 0.4 },
+                  },
+                }
+          }
+          whileTap="shake"
+        >
           {"< source />"}
-        </a>
+        </motion.a>
       </Header>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative">
         <img alt={name} className="w-full h-auto rounded-2xl" src={image} />
         <p>{description}</p>
       </div>
       <RunnerStoke chip={chip} />
-      <iframe className="w-full h-[850px]" src={projectUrl} title={name} />
+      {hasPreview ? (
+        <iframe className="w-full h-[850px]" src={projectUrl} title={name} />
+      ) : (
+        <a
+          className="flex gap-0.5 p-4 bg-blue-500 w-fit rounded-2xl items-center"
+          href={projectUrl}
+          rel="noreferrer"
+          target="_blank"
+        >
+          Open project <CaretRightIcon />
+        </a>
+      )}
     </div>
   );
 };

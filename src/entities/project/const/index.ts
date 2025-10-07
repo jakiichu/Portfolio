@@ -7,9 +7,11 @@ import { cli } from "@/entities/dependencies-chip/cli.ts";
 import { language } from "@/entities/dependencies-chip/language.ts";
 import { architecture } from "@/entities/dependencies-chip/architecture.ts";
 import { routerChip } from "@/entities/dependencies-chip/router";
+import { payments } from "@/entities/dependencies-chip/payments.ts";
 
 const initialProject = [
   {
+    hasPreview: true,
     name: "game of life",
     image: "/game-of-life.gif",
     id: "84567c7a-0652-4ead-ad58-148341953a1b",
@@ -31,8 +33,35 @@ const initialProject = [
       tools.siberiacancodeReactuse,
     ],
   },
+  {
+    hasPreview: false,
+    name: "journey fairy tale",
+    image: "/fairy-tale.png",
+    id: "a50aece4-c2c0-4eae-bae0-fb19badc3985",
+    projectUrl: "https://t.me/journeyfairy_bot",
+    description:
+      "This project is an innovative digital platform that harnesses the power of artificial intelligence to create unique, personalized fairytales for each user. By analyzing user preferences and input, the AI crafts captivating stories tailored to individual tastes, interests, and chosen characters. The result is an immersive storytelling experience, where every fairytale is distinct and emotionally engaging, encouraging creativity, literacy, and imagination in readers of all ages.",
+    chip: [
+      language.typescript,
+      architecture.FSD,
+      cli.vite,
+      coreLib.react,
+      stateManager.tanstackReactStore,
+      stateManager.tanstackQuery,
+      styleEngine.tailwindcss,
+      styleEngine.classVarianceAuthority,
+      styleEngine.framerMotion,
+      tools.eslint,
+      tools.lodash,
+      tools.amplitude,
+      payments.paddle,
+      payments.yookassa,
+      tools.telegramAppsSdkReact,
+    ],
+  },
 
   {
+    hasPreview: true,
     name: "todo vue",
     image: "/todo.png",
     id: "236899d-1235-4aad-ad11-14133212341a",
