@@ -1,7 +1,7 @@
-enum ERouterPath {
-  MAIN = "/",
-  PROJECT = "/project",
-  ONE_PROJECT = "/project/:id",
-}
+const RouterPath = {
+  MAIN: "/",
+  PROJECT: "/project",
+  ONE_PROJECT: "/project/:id",
+} as const;
 
-export { ERouterPath };
+export { RouterPath };

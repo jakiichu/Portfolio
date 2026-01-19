@@ -3,7 +3,7 @@ import { animate, motion, useMotionValue } from "framer-motion";
 
 import { IProjectEntity } from "@/entities/project/interface";
 import { useCustomNavigate } from "@/shared/utils/hook/navigate";
-import { ERouterPath } from "@/shared/constant/enum/router";
+import { RouterPath } from "@/shared/constant/enum/router";
 
 const ProjectItem = ({
   name,
@@ -35,7 +35,7 @@ const ProjectItem = ({
 
   const { navigate } = useCustomNavigate();
   const handleNavigate = () => {
-    navigate(ERouterPath.ONE_PROJECT, { ":id": id });
+    navigate(RouterPath.ONE_PROJECT, { ":id": id });
   };
 
   return (
