@@ -106,6 +106,26 @@ const initialProject = [
       routerChip.vueRouter,
     ],
   },
+  {
+    hasPreview: true,
+    name: "angry birds",
+    image: "/flappy-bird.png",
+    sourceUrl: "https://github.com/jakiichu/angry-birds",
+    projectUrl: "https://angry-birds-jet.vercel.app/",
+    id: "3a606267-7439-41a8-9ca1-7642eaab91b8",
+    chip: [
+      language.typescript,
+      architecture.clearArchitecture,
+      cli.vite,
+      coreLib.vue,
+      styleEngine.tailwindcss,
+      stateManager.pinia,
+      tools.eslint,
+      routerChip.vueRouter,
+    ],
+    description:
+      "Flappy Bird is an incredibly simple and incredibly addictive arcade game. Your goal is to guide the bird through a series of green pipes by tapping the screen to trigger short wing flaps. One wrong move and the game starts all over again. Get ready to test your nerves!",
+  },
 ] as Array<IProjectEntity>;
 
 export { initialProject };
