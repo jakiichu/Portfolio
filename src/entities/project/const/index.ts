@@ -84,6 +84,28 @@ const initialProject = [
       routerChip.vueRouter,
     ],
   },
+  {
+    hasPreview: false,
+    name: "ideal authorization",
+    image: "/vue.png",
+    sourceUrl: "https://github.com/jakiichu/ideal-authorization",
+    id: "b75ae7af-59a5-44f1-ba1b-094ee7474b30",
+    description:
+      "This project is a single-page web application developed using Vue.js, which implements a modern and secure user authorization system.\n" +
+      "\n" +
+      "\n" +
+      "The authorization system is based on the best practices of web development and provides a high level of security, convenience and scalability. The user goes through the registration and login process, followed by authentication and session management.",
+    chip: [
+      language.typescript,
+      architecture.clearArchitecture,
+      cli.vite,
+      coreLib.vue,
+      styleEngine.tailwindcss,
+      stateManager.pinia,
+      tools.eslint,
+      routerChip.vueRouter,
+    ],
+  },
 ] as Array<IProjectEntity>;
 
 export { initialProject };

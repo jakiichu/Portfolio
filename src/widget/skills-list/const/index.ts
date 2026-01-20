@@ -1,8 +1,8 @@
 import {
   AtomIcon,
   FileTsIcon,
+  FileVueIcon,
   HexagonIcon,
-  IslandIcon,
 } from "@phosphor-icons/react";
 
 import { ISkillsItemProps } from "../ui/item/interface";
@@ -12,7 +12,7 @@ type ISkillsList = Array<ISkillsItemProps>;
 const skillsList: ISkillsList = [
   {
     Icon: HexagonIcon,
-    content: "Node",
+    content: "Node.js",
   },
   {
     Icon: FileTsIcon,
@@ -23,8 +23,8 @@ const skillsList: ISkillsList = [
     content: "React",
   },
   {
-    Icon: IslandIcon,
-    content: "Tanstack",
+    Icon: FileVueIcon,
+    content: "Vue",
   },
 ];
 
