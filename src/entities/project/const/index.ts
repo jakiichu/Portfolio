@@ -126,6 +126,31 @@ const initialProject = [
     description:
       "Flappy Bird is an incredibly simple and incredibly addictive arcade game. Your goal is to guide the bird through a series of green pipes by tapping the screen to trigger short wing flaps. One wrong move and the game starts all over again. Get ready to test your nerves!",
   },
+  {
+    hasPreview: true,
+    name: "only",
+    image: "/only.png",
+    sourceUrl: "https://github.com/jakiichu/only",
+    projectUrl: "https://only-liard.vercel.app/",
+    id: "38fe049b-75cd-4157-9a93-2284619d0f0d",
+    chip: [
+      language.typescript,
+      architecture.clearArchitecture,
+      cli.vite,
+      coreLib.react,
+      stateManager.zustand,
+      styleEngine.gsap,
+      styleEngine.SCSSModule,
+      tools.eslint,
+      tools.esToolkit,
+    ],
+    description:
+      "This project is a test assignment completed for the company Only Digital.\n" +
+      "\n" +
+      "It represents a responsive single-page website built according to the provided design and technical requirements. The main goal of the task was to demonstrate a clean architecture, attention to detail, and the ability to work with modern frontend tools.\n" +
+      "\n" +
+      "The project focuses on code quality, component-based structure, and maintainability. Special attention was paid to layout accuracy, adaptability across different screen sizes, and overall user experience. This work reflects my approach to solving real-world frontend tasks in a production-like environment.",
+  },
 ] as Array<IProjectEntity>;
 
 export { initialProject };
