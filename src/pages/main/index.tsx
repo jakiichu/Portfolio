@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import AvatarComponentWithAnimation from "@/widget/avatar";
 import SocialLinkList from "@/widget/social-link-list/component";
 import Header from "@/shared/ui/header";
@@ -6,7 +8,7 @@ import TextInformation from "@/widget/text-information";
 import ProjectList from "@/widget/projects-list/component";
 import { useProjectStore } from "@/entities/project/store";
 
-const MainPage = () => {
+const MainPage = (): ReactNode => {
   const { data } = useProjectStore();
 
   return (

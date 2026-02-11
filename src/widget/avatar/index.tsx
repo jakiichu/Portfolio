@@ -4,9 +4,28 @@ import { Avatar } from "@heroui/avatar";
 import { motion } from "framer-motion";
 import { HandWavingIcon } from "@phosphor-icons/react";
 
+import { useHideScroll } from "@/shared/utils/hook/hide-scroll";
+
+const initialState = { x: 0, y: 0 };
+
 const AvatarComponent = (): ReactNode => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [padding, setPadding] = useState({ x: 0, y: 0 });
+  const [padding, setPadding] = useState(initialState);
+  const { handleVisibleScroll, handleHideScroll } = useHideScroll(
+    document.body,
+  );
+
+  useEffect(() => {
+    handleHideScroll();
+    const timerId = setTimeout(() => {
+      handleVisibleScroll();
+    }, 3000);
+
+    return () => {
+      handleVisibleScroll();
+      clearTimeout(timerId);
+    };
+  }, []);
 
   useEffect(() => {
     if (![ref.current?.offsetLeft, ref.current?.offsetTop].includes(undefined))
@@ -30,12 +49,12 @@ const AvatarComponent = (): ReactNode => {
         <div ref={ref} />
         {padding.x !== 0 && (
           <motion.div
-            animate={{ x: 0, y: 0 }}
+            animate={initialState}
             initial={{
               x: `calc(50vw ${isMd ? "- 128px" : ""} - ${padding.x}px)`,
               y: `calc(50vh - 64px - ${padding.y}px)`,
             }}
-            transition={{ delay: 2, duration: 1 }}
+            transition={{ delay: 3, duration: 1 }}
           >
             <Badge
               className="top-10 right-10 bg-white dark:bg-gray-800 border-none p-1"
@@ -43,7 +62,7 @@ const AvatarComponent = (): ReactNode => {
               content={
                 <motion.div
                   animate={{ scale: [1, 2, 1], rotate: [0, 20, -20, 0] }}
-                  className=" z-30"
+                  className="z-30"
                   initial={{ scale: 2 }}
                   transition={{ duration: 1, repeat: Infinity, repeatDelay: 6 }}
                 >
