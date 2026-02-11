@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-zeta-murex-66.vercel.app/sitemap.xml
