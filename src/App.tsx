@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
 import MainPage from "@/pages/main";
-import { RouterPath } from "@/shared/constant/enum/router";
+import { RouterPath } from "@/shared/constant/enum/router.ts";
 import ProjectItemPage from "@/pages/project/item/component";
 import WrapperLayout from "@/app/layout/wrapper";
 

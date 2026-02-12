@@ -11,7 +11,7 @@ import { useProjectStore } from "@/entities/project/store";
 import { useValidateParams } from "@/shared/utils/hook/validate-params";
 import Header from "@/shared/ui/header";
 import { useCustomNavigate } from "@/shared/utils/hook/navigate";
-import { RouterPath } from "@/shared/constant/enum/router";
+import { RouterPath } from "@/shared/constant/enum/router.ts";
 import RunnerStoke from "@/features/runner-stoke/component";
 
 const ProjectItemPage = (): ReactNode => {
