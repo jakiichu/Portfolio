@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import "@/styles/globals.css";
 import * as Sentry from "@sentry/react";
 
+import "./app/locales/core.ts";
 import App from "@/App.tsx";
 import { Provider } from "@/provider.tsx";
 
