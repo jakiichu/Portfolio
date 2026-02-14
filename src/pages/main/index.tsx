@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 
 import AvatarComponentWithAnimation from "@/widget/avatar";
 import SocialLinkList from "@/widget/social-link-list/component";
@@ -10,6 +11,7 @@ import { useProjectStore } from "@/entities/project/store";
 
 const MainPage = (): ReactNode => {
   const { data } = useProjectStore();
+  const { t } = useTranslation();
 
   return (
     <div className="max-w-4xl mx-auto grid grid-cols-1 gap-12 md:gap-16">
@@ -18,15 +20,15 @@ const MainPage = (): ReactNode => {
         <TextInformation />
       </header>
       <section>
-        <Header>Links</Header>
+        <Header>{t("links.title")}</Header>
         <SocialLinkList />
       </section>
       <section>
-        <Header>Skills</Header>
+        <Header>{t("skills.title")}</Header>
         <SkillsList />
       </section>
       <section>
-        <Header>Projects</Header>
+        <Header>{t("projects.title")}</Header>
         <ProjectList data={data} />
       </section>
     </div>
